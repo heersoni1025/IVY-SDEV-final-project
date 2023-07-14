@@ -1,0 +1,51 @@
+#Final project
+
+from tkinter import *
+
+
+#from PIL import Image, ImageTk
+
+
+def newWin():
+ #setting up new window for GUI
+ window2=Tk()
+ window2.title("Game window")  #window title
+ window2.geometry("600x600")  #window size
+ window2.config(bg="pink") 
+ 
+def displayName():
+ x = entry.get()  #user input
+ if x != "":
+  Label(text="Welcome,", bg = "cyan").pack()   
+  Label(text=x, bg = "cyan").pack()
+  Button(root, text="Click me!",  padx=25, pady=25, bd=8, bg="pink", fg="black", font=("courier", 22), command=newWin).pack()
+  
+
+
+        
+#setting up a window for GUI
+root=Tk()
+root.title("The Color Maker")  #window title
+root.geometry("900x600")  #window size
+root.config(bg="cyan")
+
+
+
+
+
+
+Label(root,text="Hello, let's play The Color Maker, kids' favorite game!", padx=16, pady=16, font=("Arial", 20), bg="red").pack()
+#text info for user on the window
+
+Label(root,text="First, enter your name below and click Done when ready",  font=("Arial", 16), bg="black", fg="white").pack()
+#entry box on the window for user to enter the temp
+entry = Entry(root)
+entry.pack()
+Button(root, text="Done",  padx=10, pady=10, bd=8, bg="green", fg="black", font=("bold", 12), command=displayName).pack()
+
+
+
+
+
+#this is needed for the program to work, programmars must remember, it will run the program 
+root.mainloop()
